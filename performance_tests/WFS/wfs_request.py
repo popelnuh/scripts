@@ -35,8 +35,8 @@ import sys
 
 # =============================================================================
 def Usage():
-    print 'Usage: wfs_request.py [-count n] [-region minx miny maxx maxy]'
-    print '                    [-size size] [-srs srs] '
+    print('Usage: wfs_request.py [-count n] [-region minx miny maxx maxy]')
+    print('                    [-size size] [-srs srs] ')
     sys.exit(1)
 
 # =============================================================================
@@ -73,21 +73,21 @@ if __name__ == '__main__':
             i = i + 1
 
         else:
-            print 'Unable to process: %s' % arg
+            print('Unable to process: %s' % arg)
             Usage()
 
         i = i + 1
 
     if region is None:
-        print '-region is required.'
+        print('-region is required.')
         Usage()
 
     if size is None:
-        print '-size is required.'
+        print('-size is required.')
         Usage()
             
     if srs is None:
-        print '-srs is required.'
+        print('-srs is required.')
         Usage()
             
     # -------------------------------------------------------------------------
@@ -109,5 +109,5 @@ if __name__ == '__main__':
     #       and bbox[3] <= region[3]:
 
         count = count-1
-        print '%.8g,%.8g,%.8g,%.8g,%s;%s' \
-              % (bbox[0],bbox[1],bbox[2],bbox[3],srs,srs)
+        print('%.8g,%.8g,%.8g,%.8g,%s;%s' \
+              % (bbox[0],bbox[1],bbox[2],bbox[3],srs,srs))
